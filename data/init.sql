@@ -1,14 +1,41 @@
-DROP DATABASE test;
+DROP database test;
 CREATE DATABASE test;
 
 use test;
 
+
+/*CREATE TABLE donation (
+										 donationId INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+										 firstname VARCHAR(30) NOT NULL,
+										 lastname VARCHAR(30) NOT NULL,
+										 email VARCHAR(50) NOT NULL,
+										 age INT(3),
+										 location VARCHAR(50),
+										 date TIMESTAMP
+); */
+
 CREATE TABLE users (
-	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-	firstname VARCHAR(30) NOT NULL,
-	lastname VARCHAR(30) NOT NULL,
-	email VARCHAR(50) NOT NULL,
-	age INT(3),
-	location VARCHAR(50),
-	date TIMESTAMP
+										 id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+										 firstname VARCHAR(30) NOT NULL,
+										 lastname VARCHAR(30) NOT NULL,
+										 email VARCHAR(50) NOT NULL,
+										 age INT(3),
+										 location VARCHAR(50),
+										 date TIMESTAMP
 );
+
+CREATE TABLE donation (
+												donationId INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+												userId INT(11) ,
+												itemId VARCHAR(30) NOT NULL,
+												itemName VARCHAR(30) NOT NULL,
+												quantity INT(3),
+												date TIMESTAMP
+);
+
+CREATE TABLE item (
+										itemId INT(11) UNSIGNED PRIMARY KEY,
+										itemName VARCHAR(30) NOT NULL,
+										date TIMESTAMP
+);
+

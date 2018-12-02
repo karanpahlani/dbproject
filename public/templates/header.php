@@ -6,10 +6,10 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Disaster Relief App</title>
+	<title>Disaster Assistance Management System</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<h1>Disaster Relief Management</h1>
+	<h1>Disaster Assistance Management System</h1>
