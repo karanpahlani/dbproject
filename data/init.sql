@@ -15,7 +15,7 @@ use test;
 ); */
 
 CREATE TABLE users (
-										 id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+										 id INT(11) ,
 										 userId VARCHAR (30) NOT NULL,
 										 firstname VARCHAR(30) NOT NULL,
 										 lastname VARCHAR(30) NOT NULL,
@@ -23,8 +23,12 @@ CREATE TABLE users (
 										 age INT(3),
 										 location VARCHAR(50),
 										 address VARCHAR(50),
-										 date TIMESTAMP
+										 date TIMESTAMP,
+										PRIMARY KEY (userId)
 );
+
+
+
 
 CREATE TABLE donation (
 												donationId INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -41,3 +45,5 @@ CREATE TABLE item (
 										date TIMESTAMP
 );
 
+
+ALTER TABLE `test`.`users` DROP PRIMARY KEY, ADD PRIMARY KEY (`userId`) USING BTREE;
