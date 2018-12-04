@@ -6,6 +6,9 @@
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password, $options);
 
+
+
+
         $sql = 'SELECT itemId,
                     itemName,
                     quantity
@@ -31,9 +34,9 @@
     <table class="table table-bordered table-condensed">
         <thead>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Job Title</th>
+            <th>Item Id</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
         </tr>
         </thead>
         <tbody>
