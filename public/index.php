@@ -10,6 +10,7 @@
 
     <li><a href="addItem.php"><strong>Add a Item Type</strong></a></li>
 
+    <li><a href="readItem.php"><strong>List of Items</strong></a></li>
 </ul>
 
 

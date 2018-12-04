@@ -47,6 +47,7 @@
         </tbody>
     </table>
     <a href="index.php">Back to home</a>
-</body>
 </div>
+</body>
+
 </html>
