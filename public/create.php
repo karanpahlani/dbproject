@@ -15,11 +15,15 @@ if (isset($_POST['submit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
         
         $new_user = array(
+            "userId" => $_POST['userId'],
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
             "age"       => $_POST['age'],
+            "address"       => $_POST['address'],
+
             "location"  => $_POST['location']
+
         );
 
         $sql = sprintf(
@@ -46,6 +50,8 @@ if (isset($_POST['submit'])) {
 <h2>Add a user</h2>
 
 <form method="post">
+    <label for="userId">User ID</label>
+    <input type="text" name="userId" id="userId">
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
     <label for="lastname">Last Name</label>
@@ -54,8 +60,13 @@ if (isset($_POST['submit'])) {
     <input type="text" name="email" id="email">
     <label for="age">Age</label>
     <input type="text" name="age" id="age">
+
+    <label for="address">Address</label>
+    <input type="text" name="address" id="address">
+
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
+
     <input type="submit" name="submit" value="Submit">
 </form>
 
