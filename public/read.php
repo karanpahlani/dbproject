@@ -41,10 +41,12 @@ if (isset($_POST['submit'])) {
             <thead>
                 <tr>
                     <th>#</th>
+                    <th>User ID</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email Address</th>
                     <th>Age</th>
+                    <th>Address</th>
                     <th>Location</th>
                     <th>Date</th>
                 </tr>
@@ -53,10 +55,12 @@ if (isset($_POST['submit'])) {
         <?php foreach ($result as $row) { ?>
             <tr>
                 <td><?php echo escape($row["id"]); ?></td>
+                <td><?php echo escape($row["userId"]); ?></td>
                 <td><?php echo escape($row["firstname"]); ?></td>
                 <td><?php echo escape($row["lastname"]); ?></td>
                 <td><?php echo escape($row["email"]); ?></td>
                 <td><?php echo escape($row["age"]); ?></td>
+                <td><?php echo escape($row["address"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
             </tr>
