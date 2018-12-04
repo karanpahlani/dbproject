@@ -32,11 +32,12 @@ CREATE TABLE users (
 
 CREATE TABLE donation (
 												donationId INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-												userId INT(11) ,
+												userId VARCHAR (30) NOT NULL,
 												itemId VARCHAR(30) NOT NULL,
 												itemName VARCHAR(30) NOT NULL,
 												quantity INT(3),
-												date TIMESTAMP
+												date TIMESTAMP,
+												FOREIGN KEY (userId) REFERENCES users(userId)
 );
 
 CREATE TABLE item (
@@ -46,4 +47,3 @@ CREATE TABLE item (
 );
 
 
-ALTER TABLE `test`.`users` DROP PRIMARY KEY, ADD PRIMARY KEY (`userId`) USING BTREE;
