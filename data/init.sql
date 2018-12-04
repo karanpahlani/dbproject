@@ -28,22 +28,24 @@ CREATE TABLE users (
 );
 
 
+CREATE TABLE item (
+										itemId INT(11) PRIMARY KEY,
+										itemName VARCHAR(30) NOT NULL,
+										date TIMESTAMP
+);
+
 
 
 CREATE TABLE donation (
 												donationId INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 												userId VARCHAR (30) NOT NULL,
-												itemId VARCHAR(30) NOT NULL,
+												itemId INT(11) NOT NULL,
 												itemName VARCHAR(30) NOT NULL,
 												quantity INT(3),
 												date TIMESTAMP,
-												FOREIGN KEY (userId) REFERENCES users(userId)
+												FOREIGN KEY (userId) REFERENCES users(userId),
+												FOREIGN KEY (itemId) REFERENCES item(itemId)
 );
 
-CREATE TABLE item (
-										itemId INT(11) UNSIGNED PRIMARY KEY,
-										itemName VARCHAR(30) NOT NULL,
-										date TIMESTAMP
-);
 
 
